@@ -1,0 +1,85 @@
+One Integer array contains only 0s and 1s.
+Write a method which moves all zeros to the beginning of the array and keep all 1s after zeros.
+O(n)
+within the same array
+1,2,3,0,5,0
+public int[] demo(int arr[]){
+  int count=0;
+	for(int i=0; i<arr.length;i++)
+	{
+    int temp=0;
+   if(arr[i] ==0)
+   {
+    temp=arr[i];
+    arr[i]=arr[count];
+    arr[count]=temp;
+    count++;
+     }
+
+   }
+   return arr;
+}
+...........
+Find out the length of longest subarray of consecutive elements.
+Arr[]= [3,4,23,6,5,8,10,22,9, 21,20,2]
+
+output: 5
+5
+sorting, treeset, sortedset
+
+set<Integer> data= HashSet<Integer>();
+for(int i =0; i< arr.length;i++)
+{
+ data.put(arr[i]);
+ }
+int count=0;
+int currentElement=0;
+for(int i=0;i< arr.length; i++)
+{
+   currentElement=arr[i];
+  if(data.contains(currentElement-1))
+  { count++;
+    currentElement = currentElement-1;
+
+    if(data.contains(currentElement))
+      count++;
+      else
+      continue;
+    }
+  }
+
+............
+
+
+Given N steps having positive integers which signifies the cost of the moving from each step. Paying the cost at i-th step, you can either climb one or two steps. Given that one can start from the 0-the step or 1-the step, the task is to find the minimum cost to reach the top of the floor(N+1) by climbing N(maximum) step.
+Examples:
+Input: a[] = {15, 21, 11, 10, 18 }      15 +11 +10 =36,  21+10=31
+Output: 31 -
+Start from 21 and then move to 10.
+
+Input: a[] = {2, 7, 4, 2, 7, 5, 9}
+Output: 13
+2->4->2->5
+
+int smallerCost=0;
+for(int i=0; i<2;i++)
+{ int cost=0;
+  for (int j=i+1; j<a.length; j++)
+  {  if(index==j || index==i)
+    {
+     int smaller= a[j]>a[j+1]?a[j]+1: a[j];
+     index=a[j]>a[j+1]?j+1:j;
+     cost= smaller+a[i];
+
+     }
+   }
+     if( cost <smallerCost)
+       smallerCost = cost;
+  }
+
+
+
+
+
+
+
