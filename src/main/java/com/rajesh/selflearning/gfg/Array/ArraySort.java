@@ -39,7 +39,7 @@ class ArraySort {
 
     // Driver Code
     public static void main(String[] args) {
-        int arr[] = {2, 1, 5, 3, 4};
+        int arr[] = {3, 2, 5, 1, 4};
         int N = arr.length;
 
         // Function call to sort the array

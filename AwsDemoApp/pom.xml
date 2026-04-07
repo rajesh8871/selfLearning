@@ -15,7 +15,7 @@
     <name>AwsDemoApp</name>
     <description>AwsDemoApp</description>
     <properties>
-        <java.version>21</java.version>
+        <java.version>11</java.version>
         <confDir>${basedir}/src/main/resources/conf</confDir>
         <releaseName></releaseName>
         <!-- Environment Base Directory (Where all workspace must be created) -->
