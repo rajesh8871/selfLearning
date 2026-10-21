@@ -1,5 +1,7 @@
 package com.rajesh.selflearning.gfg.Array;
 
+import java.util.Arrays;
+
 public class LargestNumberInArray {
     public static void main(String[] args) {
         int arr[] = {10000, 100, 20000, 500, 4000};
@@ -9,6 +11,7 @@ public class LargestNumberInArray {
                 highest = arr[i];
             }
         }
+        Arrays.stream(arr).max().ifPresent(System.out::println);
         System.out.println(highest);
     }
 

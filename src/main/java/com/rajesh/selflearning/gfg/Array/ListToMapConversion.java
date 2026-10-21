@@ -10,7 +10,12 @@ public class ListToMapConversion {
 
         List<Integer> list = Arrays.asList(1, 1, 2, 3, 4, 5, 6);
 
-        Map<Integer, Integer> convertedData = list.stream()
-                .collect(Collectors.toMap(i -> i, i -> i));
+
+        Arrays.asList("rajesh", "aastha", "mukesh", "mohit")
+                .stream()
+                .map(ele-> ele.toUpperCase())
+                .collect(Collectors.toList())
+                .stream().map(String::toLowerCase)
+                .forEach(ele -> System.out.println(ele));
     }
 }

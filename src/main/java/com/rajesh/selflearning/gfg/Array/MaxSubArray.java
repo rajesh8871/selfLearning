@@ -1,5 +1,7 @@
 package com.rajesh.selflearning.gfg.Array;
 
+import java.util.Arrays;
+
 public class MaxSubArray {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, -2, 7,-1,6};
@@ -16,7 +18,7 @@ public class MaxSubArray {
                 maxEndingHere = 0;
             }
         }
-
+        System.out.println(Arrays.stream(arr).sum());
         System.out.println("MAX : " + maxSoFar);
     }
 

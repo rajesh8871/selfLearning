@@ -12,6 +12,8 @@ public class FirstNonRepeatingCharacter {
         int aa = 1234580;
         char aa1[] = Integer.toString(aa).toCharArray();
         Arrays.sort(aa1);
+        Arrays.asList(aa1).stream().sorted().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+                .entrySet().stream().filter(e-> e.getValue() == 1).findFirst().get().getKey();
 
         String str = "rajesrh";
         String nonRepeatingChar = Arrays.stream(str.split(""))

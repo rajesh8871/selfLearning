@@ -30,13 +30,13 @@ public class DemoClass {
                 .collect(Collectors.groupingBy(StudentClass::getClassName,
                         Collectors.mapping(StudentClass::getName, Collectors.toSet())));
 
-
+        System.out.println("................     "+OBJJJ);
         Map<Integer, Set<String>> obj1 =
                 studentClassesData
                         .stream()
                         .collect(Collectors.groupingBy(StudentClass::getAge,
                                 Collectors.mapping(StudentClass::getName, Collectors.toSet())));
-        System.out.println(obj1);
+        System.out.println(">>>>>>>>>>>>>>>>>>>>>>"+obj1);
         System.out.println("----------------");
         System.out.println();
 

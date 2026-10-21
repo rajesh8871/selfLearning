@@ -19,3 +19,4 @@ public class CountZero {
 
     }
 }
+//% gives remainder and / gives quotient

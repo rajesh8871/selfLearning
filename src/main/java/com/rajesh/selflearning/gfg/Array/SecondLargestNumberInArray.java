@@ -1,10 +1,10 @@
 package com.rajesh.selflearning.gfg.Array;
 
-import java.util.Arrays;
 
 public class SecondLargestNumberInArray {
 
     public static int getLargestIndex(int arr[]) {
+
         int largestNumber = 0;
         for (int i = 0; i < arr.length; i++) {
             if (largestNumber < arr[i]) {
